@@ -29,7 +29,7 @@ class CRM_MembershipExtras_Hook_Alter_MailParamsHandler {
    * Changes the invoice date to be the contribution's receive date.
    */
   public function useReceiveDateAsInvoiceDate() {
-    if (empty($this->params['valueName']) || $this->params['valueName'] != 'contribution_invoice_receipt') {
+    if (empty($this->params['workflow']) || $this->params['workflow'] != 'contribution_invoice_receipt') {
       return;
     }
 
